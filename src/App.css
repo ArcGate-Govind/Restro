@@ -1,38 +1,155 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.top-container {
+  background-image: url('../public/restaurant.jpg');
   min-height: 100vh;
+  padding-top: 1.5em;
+}
+
+.header {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-between;
+  /* margin: 20px 60px 20px; */
+  margin: 0 auto;
+  width: calc(100% - 2em);
+  max-width: 1100px;
   color: white;
+  opacity: 0.7;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.nav-start{
+  position: relative;
 }
 
-.App-link {
-  color: #61dafb;
+.img-dropdown > li, a {
+  list-style: none;
+  text-decoration: none;
+ color:white;
+ padding: 0;
+ font-size: large;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.fleg_select{
+  border: 2px solid black;
+  border-radius: 20px;
+  max-width: 400px;
+  background-color: white;
+padding-right: 10px;
+left: 0;
+width: max-content;
+top: 100%;
+position: absolute;
+}
+
+.dropdown_img  li,a {
+  list-style: none;
+ text-decoration: none;
+ 
+}
+
+.destain{
+margin-left: 5px;
+}
+
+.nav-end {
+  display: flex;
+}
+
+.social-link {
+  margin-left: 1.25em;
+  text-decoration: none;
+}
+.social-link >a{
+  text-decoration: none;
+  color: #FFFFFF;
+  opacity: 0.7;
+  font-size: large;
+ 
+}
+.social-link > a:hover{
+  color: #FFFFFF;
+  opacity: 1;
+}
+
+.link-text{
+  margin-left: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.logo-cursive{
+  font-family: 'Grand Hotel','cursive';
+  font-size: 82px;
+}
+.logo_set{
+  color: #FFFFFF;
+  font-size: 56px;
+  font-weight: 300;
+  position: relative;
+  text-align: center;
+  text-shadow: 0 0 10px rgb(0 0 0 / 33%);
+  margin-top: 150px;
+  z-index: 3;
+
+}
+.line-cen-for{
+  font-size: 28px;
+  color: #FFFFFF;
+  text-shadow: 0 1px 4px rgb(0 0 0 / 33%);
+  text-align: center;
+  margin-top: 50px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.line2-cen-for{
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+
+  text-align: center;
+   line-height: 1.428571429;
+   color: #FFFFFF;
+   font-size: 20px;
+   margin-top: 150px;
+}
+
+.form-control{
+  background-color: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(238, 238, 238, 0.27);
+  color: #FFFFFF;
+}
+.form-set{
+  display: flex;
+  justify-content: center;
+}
+.BTN{
+  margin-left: 5px;
+}
+
+.timer{
+
+border-radius: 10px;
+padding: 5px;
+font-size: larger;
+color: #FFFFFF;
+max-width: 500px;
+margin: 1em auto;
+text-align: center;
+font-family: 'Grand Hotel','cursive';
+    font-size: 32px;
+}
+
+
+
+
+.come{
+text-align: center;
+padding-top: 20px;
+color: #FFFFFF;
+font-family: 'Grand Hotel','cursive';
+ font-size: 52px;
+}
+.Footer{
+  font-family: 'Grand Hotel','cursive';
+ font-size: 22px;
+ color: black;
+ display: flex;
+ justify-content: end;
+
 }
