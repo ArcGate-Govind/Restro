@@ -4,11 +4,45 @@ import Footer from "./Footer";
 import Timer from './Timer';
 const Navbar = () => {
   const [showLanguage, setShowLanguage] = useState(false);
-  const hello = false;
+  const [email, setEmail] = useState("")
+  
 
   const handleClick = () => {
     // setToggle(false);
   };
+  const submitForm = (e) => {
+    e.preventDefault()
+    vaildation()
+  }
+
+  const vaildation = () => {
+    if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
+      alert('email invalid')
+    }  else {
+      let newData = {  email: email, }
+      let userDataCheck = sessionStorage.getItem('Emailuser');
+      if (userDataCheck == null) {
+        userDataCheck = []
+      } else {
+        userDataCheck = JSON.parse(userDataCheck)
+      }
+      let checkEmail = userDataCheck.find(data => data.email === newData.email)
+      if (checkEmail) {
+        alert("User already present")``
+      } else {
+        userDataCheck.push(newData)
+        sessionStorage.setItem('userData', JSON.stringify(userDataCheck));
+     
+        setEmail("");
+       
+        
+      
+
+      }
+
+    }
+  }
+
 
   return (
     <>
@@ -125,13 +159,15 @@ const Navbar = () => {
           <div>
             <input
               type="email"
+              value={email} 
+              onChange={(e) => setEmail(e.target.value)} 
               className="form-control"
               placeholder="Your email here..."
             />
           </div>
-          <div className="">
-            {" "}
-            <button type="submit" className="btn btn-warning btn-fill">
+          <div className="BTN">
+          
+            <button type="submit" className="btn btn-warning btn-fill "    onClick={(e) => submitForm(e)}    >
               Notify Me
             </button>
           </div>
